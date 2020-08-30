@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100vh;
+}
+
+body{
+    background: url('/imagens/homem-pulando-colina-mobile.jpg') center top fixed;
+    background-size: cover;
+    min-height: calc(100vh - 35px);
+}
+
+input{
+    display: none;
+}
+
+input:checked ~ .menu-juntos{
+    box-shadow: 0 0 0 130vw #000000, 0 0 0 130vh #000000;
+    transition: 1s ease-in-out;
+    top: 0;
+
+}
+
+input:checked ~ label .menu{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .menu::before{
+    transform: rotate(90deg);
+    top: 0px;
+}
+
+input:checked ~ label .menu::after{
+    transform: rotate(90deg);
+    bottom: 0px;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding-bottom: 2px;
+    height: 3.5rem;
+}
+
+img#logo{
+    width: 60%;
+    margin: 15px 35px 5px 35px;
+}
+
+.icone-menu{
+    position: fixed;
+    right: 25px;
+    top: 10px;
+    cursor: pointer;
+    display: block;
+    /* border: 1px solid white; */
+    padding: 15px 2px;
+
+}
+
+/* .icone-menu:hover{
+    box-shadow: 0 0 0 8;
+} */
+
+.menu{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    width: 30px;
+    height: 4px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.menu::before,
+.menu::after{
+    content: '';
+    display: block;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+
+}
+
+.menu::before{
+    top: -10px;
+}
+
+.menu::after{
+    bottom: -10px;
+}
+
+.menu-juntos{
+    display: block;
+    font: 500 19px Arial;
+    position: fixed;
+    top: -100%;
+}
+
+#portal{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 18px;
+}
+
+#portal h1{
+    text-align: center;
+    font-size: 100%;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+#portal ul{
+    padding: 2px;
+    list-style: none;
+    width: 100%;
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    margin-right: 3% ;
+}
+
+#portal li{
+    text-align: center;
+    margin-right: 4%;
+    cursor: pointer;
+}
+
+#portal li+li{
+    margin-right: 0% ;
+}
+
+#portal li a{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid #f37021;
+    /* padding: 10px; */
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    transition: .4s ;
+    width: 100%;
+}
+
+#portal li a:hover{
+    color: #f37021;
+    text-decoration: underline;
+}
+
+
+#menu h1{
+    display: none;
+}
+
+#menu ul{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu li{
+    list-style: none;
+    cursor: pointer;
+    justify-content: center;
+    align-content: center;
+}
+
+#menu li a{
+    padding: 10px;
+    color: #ffffff;
+    transition: .4s;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
+    border: #f37021 solid 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#menu li a:hover{
+    color: #f37021;
+}
+
+footer{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: Italic;
+    text-align: center;
+    font-size: 0.8em;
+ 
+}
+
+footer#rodape{
+    position: absolute;
+    /* height: 32px; */
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
