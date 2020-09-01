@@ -4,16 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 body, html{
     height: 100vh;
+    overflow: hidden;
 }
 
 body{
     background: url('/imagens/homem-pulando-colina-mobile.jpg') center top fixed;
-    background-size: cover;
-    min-height: calc(100vh - 35px);
+    background-size: 100% 100%;
 }
 
 input{
@@ -21,9 +22,10 @@ input{
 }
 
 input:checked ~ .menu-juntos{
-    box-shadow: 0 0 0 130vw #000000, 0 0 0 130vh #000000;
-    transition: 1s ease-in-out;
-    top: 0;
+    transition: .4s ease-in-out;
+    top: 55px;
+    background: black;
+    opacity: 1;
 
 }
 
@@ -42,15 +44,20 @@ input:checked ~ label .menu::after{
 }
 
 header{
+    display: flex;
     background-color: black;
     color: white;
     padding-bottom: 2px;
     height: 3.5rem;
+    align-items: center;
 }
 
 img#logo{
-    width: 60%;
-    margin: 15px 35px 5px 35px;
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 400px;
+    left: 40px;
 }
 
 .icone-menu{
@@ -63,10 +70,6 @@ img#logo{
     padding: 15px 2px;
 
 }
-
-/* .icone-menu:hover{
-    box-shadow: 0 0 0 8;
-} */
 
 .menu{
     position: relative;
@@ -103,6 +106,12 @@ img#logo{
     font: 500 19px Arial;
     position: fixed;
     top: -100%;
+    transition: 0.5s;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5%;
+    opacity: 0;
+    
 }
 
 #portal{
@@ -111,14 +120,18 @@ img#logo{
     padding: 18px;
 }
 
-#portal h1{
+#portal ul{
+    list-style: none;
+}
+
+#portal #AP h1{
     text-align: center;
     font-size: 100%;
     font-weight: 500;
     margin-bottom: 25px;
 }
 
-#portal ul{
+#portal .dropdown{
     padding: 2px;
     list-style: none;
     width: 100%;
@@ -126,16 +139,16 @@ img#logo{
     margin: auto;
     text-align: center;
     justify-content: center;
-    margin-right: 3% ;
+    margin-right: 3%;
 }
 
-#portal li{
+#portal .dropdown li{
     text-align: center;
     margin-right: 4%;
     cursor: pointer;
 }
 
-#portal li+li{
+#portal .dropdown li+li{
     margin-right: 0% ;
 }
 
@@ -144,12 +157,11 @@ img#logo{
     justify-content: center;
     margin: auto;
     border: 1px solid #f37021;
-    /* padding: 10px; */
     padding: 8px;
     text-decoration: none;
     color: white;
     transition: .4s ;
-    width: 100%;
+    width: 40vw;
 }
 
 #portal li a:hover{
@@ -192,6 +204,12 @@ img#logo{
     color: #f37021;
 }
 
+
+.arte img{
+    width: 100vw;
+}
+
+
 footer{
     padding: 8px;
     background-color: black;
@@ -213,4 +231,46 @@ footer#rodape{
 footer p{
     color: white;
     text-align: center;
+}
+
+@media (min-width:680px){
+    body{
+        background: url('/imagens/homem-pulando-colina.jpg') center top fixed;
+        background-size: 100% 100%;
+    }
+
+    header{
+        display: flex;
+        background-color: black;
+        color: white;
+        padding-bottom: 2px;
+        height: 5.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .icone-menu{
+        right: 25px;
+        top: 25px;
+    }
+
+    #menu li a{
+        width: 40%;
+        font-size: 30px;
+    }
+
+    input:checked ~ .menu-juntos{
+        top: 75px;
+    }
+
+    input:checked ~ .menu-juntos #portal{
+        display: none;
+    }
+
+    #secundary ul{
+        list-style: none;
+    }
+
+    
+
 }
