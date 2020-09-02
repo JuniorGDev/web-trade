@@ -205,8 +205,16 @@ img#logo{
 }
 
 
-.arte img{
+#arte img{
     width: 100vw;
+}
+
+#arte img+img{
+    display: none;
+}
+
+#secundary{
+    display: none;
 }
 
 
@@ -223,7 +231,6 @@ footer{
 
 footer#rodape{
     position: absolute;
-    /* height: 32px; */
     bottom: 0;
     width: 100%;
 }
@@ -240,13 +247,7 @@ footer p{
     }
 
     header{
-        display: flex;
-        background-color: black;
-        color: white;
-        padding-bottom: 2px;
         height: 5.5rem;
-        align-items: center;
-        justify-content: space-between;
     }
 
     .icone-menu{
@@ -267,15 +268,25 @@ footer p{
         display: none;
     }
 
+    input:checked ~ #secundary{
+        display: none;
+    }
+    
+    #secundary{
+        display: block;
+    }
+
     #secundary ul{
         list-style: none;
     }
 
     #secundary ul li #ap_fs{
         display: block;
+        position: fixed;
         text-decoration: none;
         padding: 11px;
-        margin-right: 110px;
+        right: 110px;
+        top: 25px;
         background-color: #f37021;
         color: white;
     }
@@ -295,10 +306,10 @@ footer p{
         visibility: visible;
         opacity: 1;
         display: block;
-        min-width: 147px;
-        text-align: left;
+        min-width: 145px;
         padding-top: 20px;
         box-shadow: 0px 3px 5px -1px #000000;
+        top: 65px;
       }
 
         #secundary ul li ul li{
@@ -311,9 +322,27 @@ footer p{
         border: 1px solid white;
         padding: 10px;
         text-decoration: none;
-        width: 147px;
+        width: 145px;
         justify-content: center;
         color: white;
         font: 500 16px Arial;
+    }
+
+    #arte{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: "image1 image2";
+        column-gap: 22%;
+    }
+
+    #arte img{
+        grid-area: image1;
+        width: 30vw;
+    }
+
+    #arte img+img{
+        display: block;
+        grid-area: image2;
+        width: 30vw;
     }
 }
