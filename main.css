@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 
 body, html{
@@ -209,7 +208,7 @@ img#logo{
     width: 100vw;
 }
 
-#arte img+img{
+#arte .imge{
     display: none;
 }
 
@@ -319,30 +318,39 @@ footer p{
 
       #secundary ul li ul li a{
         display: flex;
-        border: 1px solid white;
+        /* border: 1px solid white; */
         padding: 10px;
         text-decoration: none;
         width: 145px;
         justify-content: center;
         color: white;
         font: 500 16px Arial;
+        transition: .5s;
     }
 
+    #secundary ul li ul li a:hover{
+        border: 1px solid #f37021;
+        color: #f37021;
+    }
+
+
     #arte{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-template-areas: "image1 image2";
-        column-gap: 22%;
+        display: flex;
+        justify-content: space-evenly;
+        height: 85vh;
+        align-items: center;
+        
+    }
+
+    #arte .imge,
+    #arte .imgi{
+        display: block;
+        padding: 50px;
     }
 
     #arte img{
-        grid-area: image1;
-        width: 30vw;
+        width: 25vw;
     }
 
-    #arte img+img{
-        display: block;
-        grid-area: image2;
-        width: 30vw;
-    }
+    
 }
