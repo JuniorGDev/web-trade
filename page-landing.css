@@ -1,0 +1,37 @@
+body{
+    background: url('/imagens/homem-pulando-colina-mobile.jpg') center top fixed;
+    background-size: 100% 100%;
+}
+
+#arte img{
+    width: 100vw;
+}
+
+#arte .imge{
+    display: none;
+}
+
+@media (min-width:680px){
+    body{
+        background: url('/imagens/homem-pulando-colina.jpg') center top fixed;
+        background-size: 100% 100%;
+    }
+
+    #arte{
+        display: flex;
+        justify-content: space-evenly;
+        height: 85vh;
+        align-items: center;
+        
+    }
+
+    #arte .imge,
+    #arte .imgi{
+        display: block;
+        padding: 50px;
+    }
+
+    #arte img{
+        width: 25vw;
+    }
+}

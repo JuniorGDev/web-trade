@@ -1,8 +1,13 @@
+body{
+    background-color: #ebebeb
+}
+
 .page-contact{
     padding: 0px 15px;
 }
 
-.duvida{
+h4{
+    display: none;
 }
 
 #text-duvida{
@@ -14,6 +19,7 @@
 }
 
 .contact{
+    display: inline-grid;
     padding: 15px;
 }
 
@@ -21,10 +27,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #f37021;
-    /* display: block; */
-    /* padding: 10px; */
-    /* margin-bottom: 20px;
-    margin-left: 20px; */
 }
 
 .regiao{
@@ -66,4 +68,66 @@
 
 .trade img{
     width: 100%;
+}
+
+@media (min-width:680px){
+
+    .page-contact{
+        padding: 30px 130px;
+    }
+    
+    .fas {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+
+    }
+
+    .fa-angle-right::before {
+        content: "\f054";
+    }
+
+    h4{
+        display: block;
+        padding: 5px;
+        margin: 10px;
+        font-family: "Raleway", sans-serif;
+        font-style: italic;
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    .duvida{
+        display: flex;
+        align-items: center;
+    }
+    
+    .duvida img{
+        width: 20%;
+    }
+    
+    .duvida h3{
+        font-size: 19px;
+    }
+    
+}
+
+@media (min-width:1200px){
+    h4{
+        padding-bottom: 60px;
+    }
+
+    .duvida img {
+        max-width: 210px;
+    }
+
+    .contact{
+        display: grid;
+    }
 }

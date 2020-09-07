@@ -11,11 +11,6 @@ body, html{
     overflow: hidden;
 }
 
-body{
-    background: url('/imagens/homem-pulando-colina-mobile.jpg') center top fixed;
-    background-size: 100% 100%;
-}
-
 input{
     display: none;
 }
@@ -25,7 +20,6 @@ input:checked ~ .menu-juntos{
     top: 55px;
     background: black;
     opacity: 1;
-
 }
 
 input:checked ~ label .menu{
@@ -40,6 +34,10 @@ input:checked ~ label .menu::before{
 input:checked ~ label .menu::after{
     transform: rotate(90deg);
     bottom: 0px;
+}
+
+input:checked .page-contact{
+    display: none;
 }
 
 header{
@@ -109,8 +107,7 @@ img#logo{
     width: 100vw;
     height: 100vh;
     padding-top: 5%;
-    opacity: 0;
-    
+    opacity: 0;  
 }
 
 #portal{
@@ -203,15 +200,6 @@ img#logo{
     color: #f37021;
 }
 
-
-#arte img{
-    width: 100vw;
-}
-
-#arte .imge{
-    display: none;
-}
-
 #secundary{
     display: none;
 }
@@ -240,11 +228,6 @@ footer p{
 }
 
 @media (min-width:680px){
-    body{
-        background: url('/imagens/homem-pulando-colina.jpg') center top fixed;
-        background-size: 100% 100%;
-    }
-
     header{
         height: 5.5rem;
     }
@@ -318,7 +301,6 @@ footer p{
 
       #secundary ul li ul li a{
         display: flex;
-        /* border: 1px solid white; */
         padding: 10px;
         text-decoration: none;
         width: 145px;
@@ -332,25 +314,5 @@ footer p{
         border: 1px solid #f37021;
         color: #f37021;
     }
-
-
-    #arte{
-        display: flex;
-        justify-content: space-evenly;
-        height: 85vh;
-        align-items: center;
-        
-    }
-
-    #arte .imge,
-    #arte .imgi{
-        display: block;
-        padding: 50px;
-    }
-
-    #arte img{
-        width: 25vw;
-    }
-
     
 }
