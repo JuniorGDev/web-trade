@@ -73,8 +73,9 @@ img#logo{
     display: block;
     background: #ffffff;
     width: 30px;
-    height: 4px;
+    height: 5px;
     transition: 0.5s ease-in-out;
+    border-radius: 8px;
 
 }
 
@@ -87,6 +88,7 @@ img#logo{
     height: 100%;
     position: absolute;
     transition: 0.5s ease-in-out;
+    border-radius: 8px;
 
 }
 
